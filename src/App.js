@@ -1,22 +1,17 @@
 import React, {useEffect} from 'react';
 
 export default function Quote() {
-    setTimeout(function() {
-        location.reload();
-    }, 10000);
-
     useEffect(() => {
         const quotes = require('../quotes.json');
-        document.querySelector('#quote').innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+        setInterval(() => {
+            document.querySelector('#quote').innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+        }, 10000);
     });
 
     return (
-        <div className="mt-24 space-y-16">
-            <div>
-                <h1 className="text-6xl font-bold">Demotiveer.me</h1>
-            </div>
+        <div>
             <p id="quote" className="text-2xl">
-                Yeet quote
+                It's a beautiful day to leave me alone.
             </p>
         </div>
     );
