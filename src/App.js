@@ -10,7 +10,7 @@ export default function Quote() {
     });
 
     return (
-        <div>
+        <div className="w-5/6 mx-auto md:w-screen">
             <p id="quote" className="text-2xl"></p>
         </div>
     );
