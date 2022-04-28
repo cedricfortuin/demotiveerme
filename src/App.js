@@ -1,6 +1,10 @@
 import React, {useEffect} from 'react';
 
 export default function Quote() {
+    setTimeout(function() {
+        location.reload();
+    }, 10000);
+
     useEffect(() => {
         const quotes = require('../quotes.json');
         document.querySelector('#quote').innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
